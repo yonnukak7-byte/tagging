@@ -1,32 +1,30 @@
-# Auto-Tagging Podcast & Audio (Versi 2)
+# API Auto-Tagging & Speech-to-Text (STT) Podcast dengan Groq Cloud
 
-Sistem pendeteksi dan klasifikasi otomatis kategori/tag untuk transkrip audio dan podcast menggunakan Hugging Face Zero-Shot Text Classification.
+Sistem otomatisasi penandaan kategori (Auto-Tag) dan transkripsi suara ke teks (STT) menggunakan API Groq Cloud (Llama 3.3 & Whisper Large v3) yang **100% Gratis & Ultra Cepat**.
 
-## 🚀 Fitur
-- Deteksi tag otomatis tanpa perlu melatih model dari awal (*Zero-Shot Classification*).
-- Pilihan label fleksibel (`agama`, `podcast santai`, `horor`, `edukasi`, `bisnis`, `komedi`, dll).
-- Konfigurasi token aman menggunakan file `.env` agar tidak bocor ke repositori publik.
+## 🚀 Fitur Unggulan
+1. **Auto-Tagging Podcast**:
+   - Ditenagai model **Llama 3.3 70B Versatile**.
+   - Sangat akurat dalam memahami bahasa Indonesia dan istilah podcast.
+   - Hasil tag dalam format JSON array yang siap diintegrasikan ke frontend atau database.
+2. **Speech-to-Text (STT) Whisper**:
+   - Ditenagai model **Whisper-large-v3** langsung dari Groq Cloud.
+   - Mengubah file audio podcast (MP3, WAV, M4A) menjadi teks secara instan dan langsung mendeteksi tag-nya secara otomatis.
 
-## 📦 Instalasi
-1. Clone repositori ini:
-   ```bash
-   git clone https://github.com/yonnukak7-byte/tagging.git
-   cd tagging
-   ```
-
-2. Pasang dependensi:
+## 📦 Panduan Instalasi
+1. Pasang pustaka dependensi:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Buat file `.env` dari `.env.example`:
-   ```bash
-   copy .env.example .env
+2. Buat file `.env` dan masukkan kunci API Groq:
+   ```env
+   GROQ_API_KEY=gsk_kunci_groq_anda
    ```
-   Lalu masukkan token Hugging Face gratis Anda ke dalam file `.env`.
+   *(Kunci gratis dapat diambil di [console.groq.com/keys](https://console.groq.com/keys))*
 
-## 🛠️ Penggunaan
-Jalankan skrip:
+## 🛠️ Contoh Penggunaan
+Jalankan file skrip:
 ```bash
-python auto_tagger.py
+python groq_tagger.py
 ```
