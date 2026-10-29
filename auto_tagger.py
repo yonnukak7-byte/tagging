@@ -6,7 +6,7 @@ load_dotenv()
 
 # Menggunakan model klasifikasi teks open-source populer (Zero-Shot Classification)
 # Rekomendasi model multi-bahasa / default Hugging Face Inference API
-DEFAULT_MODEL_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-mnli"
+DEFAULT_MODEL_URL = "https://router.huggingface.co/hf-inference/models/facebook/bart-large-mnli"
 API_URL = os.getenv("HF_API_URL", DEFAULT_MODEL_URL)
 
 # Token dapat diatur di file .env atau langsung di variabel environment
